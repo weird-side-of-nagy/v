@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content=
+"width=device-width, initial-scale=1.0">
+  <title>special order &#128521;</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      font-family: "Arial", sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      font-size: 18px;
+      color: #fff;
+      background: #ff0000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #ff3d3d;
+    }
+
+    .new-year {
+      opacity: 0;
+      transform: scale(0.8);
+      animation: none;
+      display: none;
+    }
+
+    .new-year.active {
+      display: block;
+      opacity: 1;
+      transform: scale(1);
+      animation: fadeInScale 1s ease forwards;
+    }
+
+    .new-year h1 {
+      font-size: 50px;
+      color: #fff;
+      text-shadow: 0 0 10px #ff0066, 0 0 20px #ff3399, 0 0 30px #ff66cc;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    .new-year p {
+      font-size: 20px;
+      color: #fff;
+      margin: 10px 0;
+    }
+
+    .fireworks {
+      position: relative;
+      margin: 30px auto;
+      width: 200px;
+      height: 200px;
+    }
+
+    .firework {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.8);
+      animation: fireworkExplode 2s ease-in-out infinite;
+    }
+
+    .firework:nth-child(1) {
+      left: 30%;
+      top: 20%;
+      background: #e71502;
+      animation-delay: 0s;
+    }
+
+    .firework:nth-child(2) {
+      left: 70%;
+      top: 30%;
+      background: #b8d8ba;
+      animation-delay: 0.5s;
+    }
+
+    .firework:nth-child(3) {
+      left: 50%;
+      top: 70%;
+      background: #ffd700;
+      animation-delay: 1s;
+    }
+
+    .firework:nth-child(4) {
+      left: 20%;
+      top: 60%;
+      background: #e77038;
+      animation-delay: 1.5s;
+    }
+
+    .firework:nth-child(5) {
+      left: 80%;
+      top: 40%;
+      background: #e91e63;
+      animation-delay: 2s;
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 10px #ff0066, 0 0 20px #ff3399, 0 0 30px #ff66cc;
+      }
+      100% {
+        text-shadow: 0 0 20px #ff3399, 0 0 30px #ff66cc, 0 0 40px #ff99ff;
+      }
+    }
+
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fireworkExplode {
+      0% {
+        transform: scale(0.5) translateY(0);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1) translateY(-50px);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(0.5) translateY(-100px);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <button class="btn" onclick="showNewYear()">Do You Wanna See magic?? </button>
+    <div class="new-year" id="newYear">
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>        
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <h1>Not Today but &#129446;</h1>
+      <h1> Happy Valentine day &#128037;</h1>
+      <p>To the Most Beautiful and Cleverest Girl in the whole world.</p>
+      <div class="fireworks">
+        <!-- Fireworks animation -->
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showNewYear() {
+      const newYearElement = document.getElementById('newYear');
+      newYearElement.classList.add('active');
+    }
+  </script>
+</body>
+
+</html>
